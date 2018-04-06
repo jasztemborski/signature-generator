@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff;
+        }
+
+        *,
+        ::after,
+        ::before {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .h2,
+        h2 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            display: block;
+            -webkit-margin-before: 0.83em;
+            -webkit-margin-after: 0.83em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            font-weight: bold;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+            margin-bottom: .5rem;
+        }
+
+        .form-group {
+            padding: 0px 0px 12px;
+        }
+
+        h3 {
+            display: block;
+            font-size: 1.625rem;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            font-weight: bold;
+        }
+
+        .required:after {
+            content: " *";
+            color: red
+        }
+
+        .form-group {
+            margin-left: 2rem;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .col-sm-10 {
+            width: 83%;
+
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-image: none;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            position: absolute;
+            left: 470px;
+            width: 60%;
+        }
+
+        *,
+        ::after,
+        ::before {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .mt-5 {
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .form_section--button {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            -webkit-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+            transition: background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+            -o-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+        }
+
+        .form_section--button:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="instruction_section--heading">Instrukcja obsługi aplikacji tworzącej stopkę do maila</h2>
+        <ol class="instruction_section--list">
+            <li>Pola oznaczone gwiazdką muszą być wypełnione</li>
+            <li>Po wypełnieniu pól należy kliknąć "Generuj"</li>
+            <li>Na wygenerowanej stronie należy kliknąć "CTRL + A" oraz "CTRL + C"</li>
+            <li>Przechodzimy do ustawień skrzynki pocztowej</li>
+            <li>W zakładce podpis wklejamy skopiowaną wcześniej stronę</li>
+            <li>Zapisujemy ustawienia</li>
+            <li>Testujemy działanie wysyłając maila do koleżanki z pracy :)</li>
+        </ol>
+    </div>
+    <div class="container mt-5">
+        <h3 class="form_section-heading">Generator podpisu e-mail</h3>
+        <p class="form_section-paragraph">Informacje wprowadzone w formularzu niezbędne są do wygenerowania prawidłowego kodu html, który należy wkleić w używanym
+            kliencie pocztowym</p>
+        <form enctype="multipart/form-data" action="/" method="post" id="form-generator">
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label required">Imię</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Wprowadź imię" name="name" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="surname" class="col-sm-2 col-form-label required">Nazwisko</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="surname" aria-describedby="surnameHelp" placeholder="Wprowadź nazwisko" name="surname"
+                        required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="position" class="col-sm-2 col-form-label required">Stanowisko</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="position" aria-describedby="positionHelp" placeholder="Twoje stanowisko" name="position"
+                        required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="position" class="col-sm-2 col-form-label">Opis</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="optional_text_1" aria-describedby="optional_text_1_Help" placeholder="Opcjonalny "
+                        name="optional_text_1">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="phone_number_1" class="col-sm-2 col-form-label required">Numer telefonu 1</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="phone_number_1" aria-describedby="phone_number_1Help" placeholder="Pierwszy numer telefonu"
+                        name="phone_number_1" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="image_file" class="col-sm-2 col-form-label required">Zdjęcie</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="image" name="image_social" placeholder="Adres www do zdjęcia profilu" required>
+                </div>
+            </div>
+            <div class="text-align-center">
+                <button type="submit" name="submit" class="form_section--button" id="button-submit">Generuj</button>
+            </div>
+        </form>
+    </div>
+    <br/>
+    <hr>
+    <br/>
+
+    <div>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <table cellpadding="0" cellspacing="0" width="500">
+            <tr>
+                <td valign="top" align="left">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <td width="15">&nbsp;</td>
+                        <td valign="top" align="left">
+                            <img src="https://testarmy.com//app/uploads/2018/03/person.png" id="image_social_field" style="width: 100%; max-width:80px; border-radius: 50%; margin-bottom:1rem;"
+                                id="image_social_field">
+                            <p style=" font-family: 'Roboto', sans-serif; color: #096ac9; margin: 0; font-size: 30px; font-weight: 100; line-height: 21px;">
+                                <span id="name_field">Jan</span>
+                                <strong style=" font-family: 'Roboto', sans-serif; color: #096ac9; margin: 0; font-size: 30px; font-weight: bold; line-height: 21px;"
+                                    id="surname_field">Kowalski</strong>
+                            </p>
+                            <p style=" font-family: 'Roboto', sans-serif; font-size: 17px; display:block; margin-top: 0.4rem;font-style: italic; color: #a6a6a6;"
+                                id="position_field">Project Manager</p>
+                            <span style="border-bottom: 2px solid #7ac081; display: block; width: 1.3rem;"></span>
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td align="left" valign="bottom">
+                                        <p style="color: #a6a6a6;font-family: 'Roboto', sans-serif;">
+                                            <span id="phone_number_1_field">tel: 626-595-484</span>
+                                            <a style="text-decoration: none;" href="#" id="linkedin_private_social_field">
+                                                <img src="https://testarmy.com//app/uploads/2018/03/in_white.gif" alt="" />
+                                            </a>
+                                        </p>
+                                    </td>
+                                    <td align="right" valign="top">
+                                        <img src="https://testarmy.com//app/uploads/2018/03/testarmy_black.gif" style="width:175px" alt="" />
+                                    </td>
+                                    <td align="right" valign="top" width="50">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" align="right">
+                    <img style="display:block" src="https://testarmy.com//app/uploads/2018/03/divider-1.gif" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" align="left" style="background-color: #0a69c5;" bgcolor="#0a69c5" height="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="background-color: #0a69c5;" bgcolor="#0a69c5">
+                    <table align="left" width="320px" cellpadding="0" cellspacing="0" width="100%">
+                        <td valign="top" align="left" width="15">&nbsp;</td>
+                        <td valign="top" align="left">
+                            <p style="font-family: 'Roboto', sans-serif; display: inline;color:white; margin:0; font-size:18px;">
+                                <img src="https://testarmy.com//app/uploads/2018/03/star.gif" alt="" /> TESTING
+                                <strong>SPECIAL FORCES</strong>
+                            </p>
+                            <p style="font-size: 0.85rem; font-family: 'Roboto', sans-serif;color:white;border-left: #7ac081 2px solid; line-height: 1.4;padding-left: 1em;">
+                                <strong> TestArmy Group S.A. </strong>
+                                <br> ul. Pe&#8288;tuniow&#8288;a 9&#8288;/5, 53-238 W&#8288;rocław, Pol&#8288;and
+                            </p>
+                        </td>
+                    </table>
+                    <table align="right" width="160" cellpadding="0" cellspacing="0" width="100%">
+                        <td width="15">&nbsp;</td>
+                        <td valign="top" align="left">
+                            <a style=" text-decoration: none;" href="https://www.facebook.com/testarmy/" id="facebook_private_social_field">
+                                <img src="https://testarmy.com//app/uploads/2018/03/fb.gif" alt="">
+                            </a>
+                            <a style="text-decoration: none;" href="https://www.linkedin.com/company/testarmy/" id="linkedin_company_social_field">
+                                <img src="https://testarmy.com//app/uploads/2018/03/in.gif" alt="">
+                            </a>
+                            <a style="text-decoration: none;" href="https://twitter.com/test_army" id="twitter_social_field">
+                                <img src="https://testarmy.com//app/uploads/2018/03/twitter.gif" alt="">
+                            </a>
+
+                            <br>
+                            <a style=" font-size: 0.90rem; font-family: 'Roboto', sans-serif; color: #7ac081;     display: block;
+                                margin-top: 31px;" href="https://www.testarmy.com">www.testarmy.com</a>
+                        </td>
+                        <td width="15">&nbsp;</td>
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" align="left" style="background-color: #0a69c5;" bgcolor="#0a69c5" height="20">&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+    <div style='width:500px; text-align:center; color: #a6a6a6 ; font-size: 0.6rem'>
+        <p id="optional_text_1_field" style=" font-family: 'Roboto', sans-serif;">NIP: 8992754194, REGON: 022426578, Numer KRS: 0000679700, Sąd Rejonowy dla Wrocławia-Fabrycznej, VI Wydział‚ Gospodarczy
+            Krajowego Rejestru Sądowego Kapitał zakładowy: 108 767,20 PLN</p>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>  -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
