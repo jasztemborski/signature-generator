@@ -155,9 +155,9 @@
     <div class="container mt-5">
         <h2 class="instruction_section--heading">Instrukcja obsługi aplikacji tworzącej stopkę do maila</h2>
         <ol class="instruction_section--list">
-            <li>Zdjęcie należy wgrać np. na Google Photos i wkleić URL do generatora.</li>
+            <li>Pola oznaczone gwiazdką muszą być wypełnione</li>
             <li>Po wypełnieniu pól należy kliknąć "Generuj"</li>
-            <li>Po wygenerowaniu stopki, należy ją zaznaczyć i kliknąć  "CTRL + C"</li>
+            <li>Na wygenerowanej stronie należy kliknąć "CTRL + A" oraz "CTRL + C"</li>
             <li>Przechodzimy do ustawień skrzynki pocztowej</li>
             <li>W zakładce podpis wklejamy skopiowaną wcześniej stronę</li>
             <li>Zapisujemy ustawienia</li>
@@ -212,31 +212,41 @@
     <br/>
 
     <div>
-            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-            <table cellpadding="0" cellspacing="0" width="500">
-                <tr>
-                    <td valign="bottom" align="left">
-                        <table cellpadding="0" cellspacing="0" width="100%">
-                            <td width="15">&nbsp;</td>
-                            <td valign="top" align="left">
-                                <img width="80" src="https://testarmy.com//app/uploads/2018/03/person.png" id="image_social_field" style="width: 100%; max-width:80px; border-radius: 50%; margin-bottom:1rem;"
-                                    id="image_social_field">
-                                <p style=" font-family: 'Roboto', sans-serif; color: #096ac9; margin: 0; font-size: 18px; font-weight: 100; line-height: 21px;">
-                                    <span id="name_field">Jan</span>
-                                    <strong style=" font-family: 'Roboto', sans-serif; color: #096ac9; margin: 0; font-size: 18px; font-weight: bold; line-height: 21px;"
-                                        id="surname_field">Kowalski</strong>
-                                </p>
-                                <p style="margin-bottom: 0px; font-family: 'Roboto', sans-serif; font-size: 14px; display:block; margin-top: 0.4rem;font-style: italic; color: #a6a6a6;"
-                                    id="position_field">Project Manager</p>
-                            </td>
-                            <td align="right" valign="bottom">
-                                <img src="https://testarmy.com//app/uploads/2018/04/logo-1.png" width="175" style="width:175px;" alt="" />
-                            </td>
-                        </table>
-                    </td>
-
-                </tr>
-                <tr>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <table cellpadding="0" cellspacing="0" width="500">
+            <tr>
+                <td valign="top" align="left">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <td width="15">&nbsp;</td>
+                        <td valign="top" align="left">
+                                <img width="80" src="https://testarmy.com//app/uploads/2018/03/person.png" id="image_social_field" style="width: 100%; max-width:80px; border-radius: 50%; margin-bottom:16px;"
+                                id="image_social_field">
+                            <p style=" font-family: 'Roboto', sans-serif; color: #096ac9; margin: 0; font-size: 18px; font-weight: 100; line-height: 21px;">
+                                <span id="name_field">Jan</span>
+                                <strong style=" font-family: 'Roboto', sans-serif; color: #096ac9; margin: 0; font-size: 18px; font-weight: bold; line-height: 21px;"
+                                    id="surname_field">Kowalski</strong>
+                            </p>
+                            <p style="margin-bottom: 0px; font-family: 'Roboto', sans-serif; font-size: 14px; display:block; margin-top: 6px; font-style: italic; color: #a6a6a6;"
+                                id="position_field">Project Manager</p>
+                            <span style="border-bottom: 2px solid #7ac081; display: block; width: 20px; margin-top:5px"></span>
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td align="left" valign="bottom">
+                                        <p style="color: #a6a6a6;font-family: 'Roboto', sans-serif;">
+                                            <span id="phone_number_1_field">tel: 626-595-484</span>
+                                        </p>
+                                    </td>
+                                    <td align="right" valign="bottom">
+                                            <img src="https://testarmy.com//app/uploads/2018/04/logo-1.png" width="175" style="width:175px;" alt="" />
+                                        </td>
+                                    <td align="right" valign="top" width="50">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </table>
+                </td>
+            </tr>
+            <tr>
                     <td valign="top" height="10" align="right" style="font-size: 1px; line-height: 1px; border-collapse: collapse;">
                         <img style="display:block" src="https://testarmy.com//app/uploads/2018/03/divider-1.gif" height="10" alt="" />
                     </td>
@@ -299,17 +309,19 @@
 
                     </td>
                 </tr>
-                <tr>
-                    <td valign="top" align="left" style="background-color: #0a69c5;" bgcolor="#0a69c5" height="20">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>
-                        <p id="optional_text_1_field" style=" text-align:center; color: #a6a6a6 ; font-size: 10px; font-family: 'Roboto', sans-serif;">NIP: 8992754194, REGON: 022426578, Numer KRS: 0000679700, Sąd Rejonowy dla Wroclawia-Fabrycznej,
-                            VI Wydział‚ Gospodarczy Krajowego Rejestru Sądowego Kapitał zakładowy: 123 000 PLN</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <tr>
+            <td valign="top" align="left" style="background-color: #0a69c5;" bgcolor="#0a69c5" height="20">&nbsp;</td>
+    </tr>
+        <tr>
+        <td>
+            <p id="optional_text_1_field" style=" text-align:center; color: #a6a6a6 ; font-size: 10px; font-family: 'Roboto', sans-serif;">NIP: 8992754194, REGON: 022426578, Numer KRS: 0000679700, Sąd Rejonowy dla Wroclawia-Fabrycznej,
+                    VI Wydział‚ Gospodarczy Krajowego Rejestru Sądowego Kapitał zakładowy: 123 000 PLN</p>
+        </td>
+        </tr>
+        </table>
+    </div>
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
